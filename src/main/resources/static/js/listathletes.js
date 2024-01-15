@@ -1,8 +1,6 @@
-$(document).ready(function() {
-
-    listAthletes();
-
-  $('#athletestable').DataTable();
+document.addEventListener('DOMContentLoaded', function() {
+  listAthletes();
+  // Puedes inicializar DataTables aquí si es necesario
 });
 
 async function listAthletes(){
@@ -36,10 +34,7 @@ async function listAthletes(){
                         athlete.city +'</td><td>'+
                         athlete.modality +'</td></tr>';
 
-
     listHTML += athleteHTML;
-
-
   }
 
   document.querySelector('#athletestable tbody').outerHTML = listHTML;

@@ -30,30 +30,51 @@ async function addUser(){
         return;
     }
 
-    if(data.province == null){
-        data.province = "-";
+    if(data.province == ''){
+        data.province = '-';
     }
-    if(data.city == null){
-        data.city = "-";
+    if(data.city == ''){
+        data.city = '-';
     }
-    if(data.degrees == null){
-        data.degrees = "-";
-    }
-
-    for(let athlete of data){
-        if(athlete == null){
-            alert('Empty fields are not allowed');
-            return;
-        }
+    if(data.degrees == ''){
+        data.degrees = '-';
     }
 
-  const request = await fetch('usuarios', {
+
+if (!validateData(data)) {
+    return;
+}
+
+
+  const request = await fetch('athletes', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(datos)        //esto se usa para convertir el objeto datos a una cadena de JSON
+    body: JSON.stringify(data)
   });
 
+
+alert('has been successful registered!');
+window.location.href = 'login.html';
+
+
+}
+
+function validateData(data) {
+    let emptyFields = [];
+
+    for (let key in data) {
+        if (data.hasOwnProperty(key) && (data[key] === null || data[key] === undefined || data[key] === '')) {
+            emptyFields.push(key);
+        }
+    }
+
+    if (emptyFields.length > 0) {
+        alert('The following fields must be completed: ' + emptyFields.join(', '));
+        return false;
+    }
+
+    return true;
 }

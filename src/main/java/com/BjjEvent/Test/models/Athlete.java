@@ -11,7 +11,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "atletas")
 @Data
-public class Atleta {
+public class Athlete {
 
     @Id
     @Column(name = "dni")

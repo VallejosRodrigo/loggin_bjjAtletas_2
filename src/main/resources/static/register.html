@@ -19,6 +19,8 @@
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                                    <br>
                                     <div class="card-body">
                                         <form>
                                             <div class="row mb-3">
@@ -58,7 +60,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="txtDni" type="number" placeholder="Enter your DNI" />
-                                                        <label for="txtDni">DNI</label>
+                                                        <label for="txtDni">DNI (without points or commas)</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -96,40 +98,84 @@
 
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
+                                                    <label for="txtGender">Gender</label>
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="txtGender" type="text" placeholder="Enter your Gender" />
-                                                        <label for="txtGender">Gender</label>
+                                                        <select class="form-control" id="txtGender">
+                                                            <option value="male">Male</option>
+                                                            <option value="female">Female</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="txtBelt" type="text" placeholder="Enter your Belt" />
-                                                        <label for="txtBelt">Belt</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="txtDegrees" type="text" placeholder="Enter your Degrees (Optional)" />
-                                                        <label for="txtDegrees">Degrees (opt)</label>
+                                                    <label for="txtModality">Modality</label>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <select class="form-control" id="txtModality">
+                                                            <option value="gi">GI</option>
+                                                            <option value="no_gi">NO GI</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
 
+                                            <br>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="txtBelt">Belt</label>
+                                                        <div class="form-floating mb-3 mb-md-0">
+                                                            <select class="form-control" id="txtBelt">
+                                                                <option value="white">White</option>
+                                                                <option value="blue">Blue</option>
+                                                                <option value="purple">Purple</option>
+                                                                <option value="brawn">Brawn</option>
+                                                                <option value="black">Black</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="txtDegrees">Degrees (Opt)</label>
+                                                        <div class="form-floating mb-3 mb-md-0">
+                                                            <select class="form-control" id="txtDegrees">
+                                                                <option value="zero">0</option>
+                                                                <option value="one">1</option>
+                                                                <option value="two">2</option>
+                                                                <option value="three">3</option>
+                                                                <option value="four">4</option>
+                                                                <option value="more_than_four">more than 4</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
+                                                    <label for="txtCategoryAge">Age Category</label>
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="txtCategoryAge" type="text" placeholder="Enter your Age Category" />
-                                                        <label for="txtCategoryAge">Age Category</label>
+                                                        <select class="form-control" id="txtCategoryAge">
+                                                            <option value="adult">Adult (18 - 29 years)</option>
+                                                            <option value="masters1">Masters 1 (30 - 35 years)</option>
+                                                            <option value="masters2">Masters 2 (36 - 40 years)</option>
+                                                            <option value="masters3">Masters 3 (41 - 45 years)</option>
+                                                            <option value="masters4">Masters 4 (46 - 50 years)</option>
+                                                            <option value="masters5">Masters 5 (51 - 55 years)</option>
+                                                            <option value="masters6">Masters 6 (56 - 60 years)</option>
+                                                            <option value="masters7">Masters 7 (61 or more years)</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-floating">
-                                                        <input class="form-control" id="txtCategoryWeight" type="text" placeholder="Enter your Weight Category" />
-                                                        <label for="txtCategoryWeight">Weight Category</label>
+                                                    <label for="txtCategoryWeight">Weight Category</label>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <select class="form-control" id="txtCategoryWeight">
+                                                            <option value="galo">Rooster-Galo (until 57,50 kg)</option>
+                                                            <option value="pluma">Light Feather-Pluma (64,00 kg)</option>
+                                                            <option value="pena">Feather-Pena (70,00 kg)</option>
+                                                            <option value="leve">Light-Leve (76,00 kg)</option>
+                                                            <option value="medio">Middle-Medio (82,30 kg)</option>
+                                                            <option value="medio_pesado">Medium Heavy-Medio Pesado (88,30 kg)</option>
+                                                            <option value="pesado">Heavy-Pesado (94,30 kg)</option>
+                                                            <option value="super_pesado">Super Heavy-Super Pesado (100,50 kg)</option>
+                                                            <option value="pesadisimo">Ultra Heavy-Pesadísimo (No maximun weight)</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -139,20 +185,8 @@
                                                 <label for="txtAcademy">Academy</label>
                                             </div>
 
-                                            <div class="col-md-6">
-                                                <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="txtModality" type="text" placeholder="In what modality are you going to compete?" />
-                                                    <label for="txtModality">Modality</label>
-                                                </div>
-                                            </div>
-
-
-
-
-
-
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create Account</a></div>
+                                                <div class="d-grid"><a onclick="addUser();" class="btn btn-primary btn-block" href="#">Check in</a></div>
                                             </div>
                                         </form>
                                     </div>
@@ -169,7 +203,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div class="text-muted">Copyright &copy; Rodrigo Freelancer 2024</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -182,5 +216,7 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+
+        <script src="js/registerAthletes.js"></script>
     </body>
 </html>
