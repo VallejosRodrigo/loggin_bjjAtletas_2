@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AtletaController {
 
-    @RequestMapping(value = "testing")
+    @RequestMapping(value = "athletes")
     public String test(){
 
         return "holis";
