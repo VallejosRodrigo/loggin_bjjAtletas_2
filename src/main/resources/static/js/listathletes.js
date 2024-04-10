@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
   listAthletes();
-  // Puedes inicializar DataTables aquí si es necesario
+
 });
 
 async function listAthletes(){
+
+const token = localStorage.getItem('');
 
   const request = await fetch('regathletes', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authentication': 'Bearer '
     }
   });
 

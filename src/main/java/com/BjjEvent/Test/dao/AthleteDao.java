@@ -9,4 +9,6 @@ public interface AthleteDao {
     void register(Athlete athlete);
 
     List<Athlete> listAthletes();
+
+    Athlete loginEmailPassCheck(Athlete athlete);
 }

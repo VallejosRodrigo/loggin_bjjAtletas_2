@@ -13,10 +13,11 @@ import java.sql.Date;
 @Data
 public class Athlete {
 
-    @Id
     @Column(name = "dni")
     private int dni;
 
+    @Id
+    @Column(name = "email")
     private String email;
 
     @Column(name = "password")

@@ -1,5 +1,5 @@
-$(document).ready(function() {
-   //empty
+document.addEventListener('DOMContentLoaded', function () {
+  // Code to run when the DOM is ready
 });
 
 //-----------add users---------------
@@ -46,19 +46,27 @@ if (!validateData(data)) {
 }
 
 
-  const request = await fetch('athletes', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
+ try {
+     const response = await fetch('athletes', {
+       method: 'POST',
+       headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json',
+       },
+       body: JSON.stringify(data),
+     });
 
+     if (!response.ok) {
+       throw new Error('Network response was not ok');
+     }
 
-alert('has been successful registered!');
-window.location.href = 'login.html';
+     alert('Successfully registered!');
+     window.location.href = 'login.html';
 
+ }catch (error) {
+    console.error('Error during registration:', error);
+    alert('An error occurred during registration. Please try again later.');
+ }
 
 }
 
